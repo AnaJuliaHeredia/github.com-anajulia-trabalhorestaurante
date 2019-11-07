@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<title>Cardapio</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="somando.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    alert("Seja Bem-Vindo!!!");
+
+  </script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif; }
+.w3-bar-block .w3-bar-item {padding:20px}
+.fundo{
+  background-color: #62b22f;
+
+}
+button{
+  background-color: rgba(34, 139, 34, 0.3);
+  font-size: 20px;
+
+}
+.largura2{min-width: 100%;
+      background-color: #228B22;
+      color:white;}
+
+h3{
+        color: white;
+      }
+      input{ 
+      height: 10%;
+      background-color: #62b22f;
+      border: 0; }
+      .alinhado{
+        text-align: justify;
+      }
+</style>
+<body class="fundo">
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Fechar Menu</a>
+  <a href="cardapio.html" onclick="w3_close()" class="w3-bar-item w3-button">Cardapio</a>
+  <a href="listar.php" onclick="w3_close()" class="w3-bar-item w3-button">Listar Pedidos</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Cadastrar</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">Logar</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge " style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left fundo" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16 ">
+      <img src="logo1.png" width="26%">
+     </div>
+    <div class="w3-center w3-padding-16 fundo">Cardápio</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+<form name="form1" method="post" action="cadastro2.php" class="needs-validation" novalidate>
+<label><h4>Nome</h4></label>
+  <input type="text" name="nome" id="op" class="form-control">
+<label><h4>Mesa</h4></label>
+  <input type="number" name="mesa" id="op" class="form-control">
+  <!-- First Photo Grid-->
+  <br><br>
+   <h4>ENTRADAS</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+  
+    <hr id="about">
+   <div class="w3-quarter">
+      <td><LABEL>Salada de Frutas</LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td><LABEL>(morango, manga, uva, kiwi, abacaxi, banana)</LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td><LABEL>R$10,00</LABEL><img src="png/mais.png" onclick="somarfruta(10);return false;">
+        <img src="png/menos.png" onclick="menosfruta(0);return false;" style="width:8%"></td>   
+    </div> 
+  </div>
+  <hr id="about">
+
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <td><LABEL>Pastelzinhos de carne </LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td><LABEL>(6 unidades )</LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td> <LABEL>R$12,00</LABEL><img src="png/mais.png" onclick="somarpastel(10);return false">
+        <img src="png/menos.png" onclick="menospastel(0);return false;" style="width:8%"></td>   
+    </div>
+ </div>
+ <hr id="about">
+
+ <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <td><LABEL>Batata Frita</LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td><LABEL>(Com Bacon e queijo) </LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td> <LABEL>R$16,00</LABEL><img src="png/mais.png" onclick="somarfritas(10);return false;">
+        <img src="png/menos.png" onclick="menosfritas(0);return false;" style="width:8%"></td>   
+    </div>
+ </div>
+ <hr id="about">
+  <h4>PRATOS PRINCIPAIS</h4>
+<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+  <hr id="about"><br>
+    <div class="w3-quarter">
+      <td><LABEL>Parmegiana de Frango </LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td><LABEL>(Acompanha arroz, feijão e batata frita) </LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td> <LABEL>R$32,00</LABEL><img src="png/mais.png" onclick="somarfrango(10);return false;">
+        <img src="png/menos.png" onclick="menosfrango(0);return false;" style="width:8%"></td>   
+    </div>
+ </div>
+ <hr id="about">
+
+<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+    <div class="w3-quarter">
+      <td><LABEL>Picanha ao Molho Babecue </LABEL></td>  </div>
+    <div class="w3-quarter">
+      <td><LABEL>(Acompanha arroz, feijão e batata frita) </LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td> <LABEL>R$52,00</LABEL><img src="png/mais.png" onclick="somarpicanha(10);return false;">
+        <img src="png/menos.png" onclick="menospicanha(0);return false;" style="width:8%"></td>   
+    </div>
+ </div>
+ <hr id="about">
+ <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <td><LABEL>Macarrão Parafuso ao Carbonara de Ervas</LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td><LABEL>(Com molho) </LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td> <LABEL>R$40,00</LABEL><img src="png/mais.png" onclick="somarervas(10);return false;">
+        <img src="png/menos.png" onclick="menoservas(0);return false;" style="width:8%"></td>   
+    </div>
+ </div>
+ <hr id="about">
+ <h4>SOBREMESA</h4>
+ <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+  
+  <hr id="about"><br>
+    <div class="w3-quarter">
+      <td><LABEL>Pudim de Leite Condensado</LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td><LABEL>(Pequeno) </LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td> <LABEL>R$10,00</LABEL><img src="png/mais.png" onclick="somarpudim(10);return false;">
+        <img src="png/menos.png" onclick="menospudim(0);return false;" style="width:8%"></td>   
+    </div>
+ </div>
+ <hr id="about">
+
+<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+    <div class="w3-quarter">
+      <td><LABEL>Petit Gateau</LABEL></td>
+        </div>
+    <div class="w3-quarter">
+      <td><LABEL>(Com morango) </LABEL></td>   
+    </div>
+    <div class="w3-quarter">
+      <td> <LABEL>R$16,00</LABEL><img src="png/mais.png" onclick="somarpetit(10);return false;">
+        <img src="png/menos.png" onclick="menospetit(0);return false;" style="width:8%"></td>   
+    </div>
+ </div>
+ <hr id="about">
+
+
+      <h4>RESUMO DE PEDIDO</h4>
+      <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter" class="alinhado">      
+      Salada de Frutas 
+    </div>
+    <div class="w3-quarter" class="alinhado">
+      <input id="resultado" value="0"  />
+      <img src="png/mais.png" onclick="somarfruta(10);return false;">
+      <img src="png/menos.png" onclick="menosfruta(0);return false;" style="width:8%"></td> 
+    </div> 
+    <br>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter" class="alinhado">      
+      <td> Pastalzinho
+    </div>
+    <div class="w3-quarter" class="alinhado">
+      <input id="resultado1" value="0"   />
+      <img src="png/mais.png" onclick="somarpastel(10);return false;">
+      <img src="png/menos.png" onclick="menospastel(0);return false;" style="width:8%"></td> 
+    </div> 
+    <br>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter" class="alinhado">      
+      <td> Batata Frita
+  </div>
+    <div class="w3-quarter" class="alinhado">
+      <input id="resultado2" value="0"   />
+      <img src="png/mais.png" onclick="somarfritas(10);return false;">
+      <img src="png/menos.png" onclick="menosfritas(0);return false;" style="width:8%"></td> 
+    </div>  
+    <br>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter" class="alinhado">      
+      <td>Parmegiana 
+    </div>
+    <div class="w3-quarter" class="alinhado">
+      <input id="resultado3" value="0"   />
+      <img src="png/mais.png" onclick="somarfrango(10);return false;">
+      <img src="png/menos.png" onclick="menosfrango(0);return false;" style="width:8%"></td>
+    </div>     
+    <br>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter" class="alinhado">      
+      <td>Picanha 
+    </div>
+    <div class="w3-quarter" class="alinhado">
+      <input id="resultado4" value="0"   />
+      <img src="png/mais.png" onclick="somarpicanha(10);return false;">
+      <img src="png/menos.png" onclick="menospicanha(0);return false;" style="width:8%"></td>
+    </div>
+    <br>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter" class="alinhado">      
+      <td>Macarrão
+    </div>
+    <div class="w3-quarter" class="alinhado">
+      <input id="resultado5" value="0"   />
+      <img src="png/mais.png" onclick="somarervas(10);return false;">
+      <img src="png/menos.png" onclick="menoservas(0);return false;" style="width:8%"></td>
+    </div>   
+    <br> 
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter" class="alinhado">      
+      <td>Pudim 
+    </div>
+    <div class="w3-quarter" class="alinhado">
+      <input id="resultado6" value="0"   />
+      <img src="png/mais.png" onclick="somarpudim(10);return false;">
+      <img src="png/menos.png" onclick="menospudim(0);return false;" style="width:8%"></td>
+    </div> 
+    <br>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter" class="alinhado">      
+      <td>Petit Gateau 
+    </div>
+    <div class="w3-quarter" class="alinhado">
+      <input id="resultado7" value="0"   />
+      <img src="png/mais.png" onclick="somarpetit(10);return false;">
+      <img src="png/menos.png" onclick="menospetit(0);return false;" style="width:8%"></td>
+    </div>  
+       
+<br><br>
+  <input type="submit" name="Cadastro2" value="Cadastrar"  class="btn  largura2"/><br><br>
+
+</form>
+  <!-- Pagination -->
+  
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+   
+  </div>
+  <hr>
+  
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+     
+    </div>
+  
+    <div class="w3-third">
+      
+    </div>
+
+    <div class="w3-third w3-serif">
+      
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+
+function somarfruta(valorMaximo){
+var value = parseInt(document.getElementById('resultado').value,10);
+value = isNaN(value) ? 0 : value;
+if (value >= valorMaximo) {
+  value = valorMaximo;
+}
+else{
+  value++;
+}
+
+  document.getElementById('resultado').value = value;
+  
+}
+
+function menosfruta(valorMinimo){
+var value = parseInt(document.getElementById('resultado').value,10);
+value = isNaN(value) ? 0 : value;
+if (value <= valorMinimo) {
+  value = 0;
+}
+else{
+  value--;
+}
+  document.getElementById('resultado').value = value;
+  
+}
+
+
+function somarpastel(valorMaximo){
+var value = parseInt(document.getElementById('resultado1').value,10);
+value = isNaN(value) ? 0 : value;
+if (value >= valorMaximo) {
+  value = valorMaximo;
+}
+else{
+  value++;
+}
+  document.getElementById('resultado1').value = value;
+  
+}
+
+function menospastel(valorMinimo){
+var value = parseInt(document.getElementById('resultado1').value,10);
+value = isNaN(value) ? 0 : value;
+if (value <= valorMinimo) {
+  value = 0;
+}
+else{
+  value--;
+}
+  document.getElementById('resultado1').value = value;
+  
+}
+
+function somarfritas(valorMaximo){
+var value = parseInt(document.getElementById('resultado2').value,10);
+value = isNaN(value) ? 0 : value;
+if (value >= valorMaximo) {
+  value = valorMaximo;
+}
+else{
+  value++;
+}
+  document.getElementById('resultado2').value = value;
+  
+}
+
+function menosfritas(valorMinimo){
+var value = parseInt(document.getElementById('resultado2').value,10);
+value = isNaN(value) ? 0 : value;
+if (value <= valorMinimo) {
+  value = 0;
+}
+else{
+  value--;
+}
+  document.getElementById('resultado2').value = value;
+  
+}
+
+function somarfrango(valorMaximo){
+var value = parseInt(document.getElementById('resultado3').value,10);
+value = isNaN(value) ? 0 : value;
+if (value >= valorMaximo) {
+  value = valorMaximo;
+}
+else{
+  value++;
+}
+  document.getElementById('resultado3').value = value;
+  
+}
+
+function menosfrango(valorMinimo){
+var value = parseInt(document.getElementById('resultado3').value,10);
+value = isNaN(value) ? 0 : value;
+if (value <= valorMinimo) {
+  value = 0;
+}
+else{
+  value--;
+}
+  document.getElementById('resultado3').value = value;
+  
+}
+
+function somarpicanha(valorMaximo){
+var value = parseInt(document.getElementById('resultado4').value,10);
+value = isNaN(value) ? 0 : value;
+if (value >= valorMaximo) {
+  value = valorMaximo;
+}
+else{
+  value++;
+}
+  document.getElementById('resultado4').value = value;
+  
+}
+
+function menospicanha(valorMinimo){
+var value = parseInt(document.getElementById('resultado4').value,10);
+value = isNaN(value) ? 0 : value;
+if (value <= valorMinimo) {
+  value = 0;
+}
+else{
+  value--;
+}
+  document.getElementById('resultado4').value = value;
+  
+}
+
+function somarervas(valorMaximo){
+var value = parseInt(document.getElementById('resultado5').value,10);
+value = isNaN(value) ? 0 : value;
+if (value >= valorMaximo) {
+  value = valorMaximo;
+}
+else{
+  value++;
+}
+  document.getElementById('resultado5').value = value;
+  
+}
+
+function menoservas(valorMinimo){
+var value = parseInt(document.getElementById('resultado5').value,10);
+value = isNaN(value) ? 0 : value;
+if (value <= valorMinimo) {
+  value = 0;
+}
+else{
+  value--;
+}
+  document.getElementById('resultado5').value = value;
+  
+}
+
+function somarpudim(valorMaximo){
+var value = parseInt(document.getElementById('resultado6').value,10);
+value = isNaN(value) ? 0 : value;
+if (value >= valorMaximo) {
+  value = valorMaximo;
+}
+else{
+  value++;
+}
+  document.getElementById('resultado6').value = value;
+  
+}
+
+function menospudim(valorMinimo){
+var value = parseInt(document.getElementById('resultado6').value,10);
+value = isNaN(value) ? 0 : value;
+if (value <= valorMinimo) {
+  value = 0;
+}
+else{
+  value--;
+}
+  document.getElementById('resultado6').value = value;
+  
+}
+
+function somarpetit(valorMaximo){
+var value = parseInt(document.getElementById('resultado7').value,10);
+value = isNaN(value) ? 0 : value;
+if (value >= valorMaximo) {
+  value = valorMaximo;
+}
+else{
+  value++;
+}
+  document.getElementById('resultado7').value = value;
+  
+}
+
+function menospetit(valorMinimo){
+var value = parseInt(document.getElementById('resultado7').value,10);
+value = isNaN(value) ? 0 : value;
+if (value <= valorMinimo) {
+  value = 0;
+}
+else{
+  value--;
+}
+  document.getElementById('resultado7').value = value;
+  
+}
+
+
+
+
+</script>
+
+</body>
+</html>

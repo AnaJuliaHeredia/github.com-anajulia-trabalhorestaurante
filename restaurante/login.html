@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8">
+  <!--Bootstrap-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilo\style.css"/>
+  <script type="text/javascript">
+  function verificar(){
+    if (document.form1.nome.value.length==0){
+      alert("Digite o Nome");
+      return false;
+    }
+    
+    else if (document.form1.salario.value==0){
+      alert("Selecione o Salario");
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+  </script>
+  <style type="text/css">
+    .largura{min-width: 80%;}
+    .largura2{min-width: 100%;
+    background-color: #228B22;
+      color:white;}
+      body{font-family: "Roboto";}
+  </style>
+</head>
+<body>
+  <div class='jumbotron text-center'>
+    <img  class="rounded" >
+    <img   class="rounded">
+ <img src="logo1.png" class="rounded" alt="Cinque Terre" width="40%">
+</div>
+  
+<div class="container">
+  <form method="POST" action="login.php">
+  <label>Login:</label><input type="text" name="login" id="login" class="form-control"><br>
+  <label>Senha:</label><input type="password" name="senha" id="senha" class="form-control"><br>
+  <input type="submit" value="Entrar" id="entrar" name="entrar" class="btn largura2"><br><br>
+  <a href="index.html"><button type="button" class="btn largura2">Faça cadastro</button></a>
+</div>
+</form>
+</body>
+</html>
